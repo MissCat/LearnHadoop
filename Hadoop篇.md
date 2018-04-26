@@ -33,7 +33,7 @@ sudo apt-get install oracle-java8-set-default
 ```
 JAVA_HOME = "{你的JAVA安装路径}"
 ```
-保存后，使用`source /etc/environment`命令更新环境变量，最后检验是否安装成功
+保存后，使用`source /etc/environment`命令更新环境变量（可能需要重启），最后检验是否安装成功
 ```
 echo $JAVA_HOME
 java -version
@@ -80,11 +80,11 @@ sudo chown -R {你的用户名} ./hadoop   # 修改文件权限
         </property>
         <property>
              <name>dfs.namenode.name.dir</name>
-             <value>file:/usr/local/hadoop/tmp/dfs/name</value>
+             <value>/usr/local/hadoop/tmp/dfs/name</value>
         </property>
         <property>
              <name>dfs.datanode.data.dir</name>
-             <value>file:/usr/local/hadoop/tmp/dfs/data</value>
+             <value>/usr/local/hadoop/tmp/dfs/data</value>
         </property>
 </configuration>
 ```
